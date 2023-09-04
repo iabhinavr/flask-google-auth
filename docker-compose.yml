@@ -1,0 +1,11 @@
+version: '3'
+services:
+    flask:
+        build:
+            context: .
+            dockerfile: FLASK.Dockerfile
+        ports:
+            - "5001:5001"
+        volumes:
+            - ./src:/home/abhinav/src
+        restart: always

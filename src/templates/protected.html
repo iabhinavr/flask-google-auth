@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Page</title>
+</head>
+<body>
+    {% if authenticated %}
+        <img src="{{ user_data['picture'] }}" alt="">
+        <h1>Welcome, {{ user_data['given_name'] }}</h1>
+    {% else %}
+        <a href="/google/signin">Please Login</a>
+    {% endif %}
+</body>
+</html>
